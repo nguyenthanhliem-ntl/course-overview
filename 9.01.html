@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="bong" src="https://i.pinimg.com/564x/42/06/01/4206015676e9348268780afaed41d1ee.jpg" style="width: 300px" >
+    <p> Click để bóng di chuyển</p>
+    <input type="button" value="click me" onclick="moveRight();"/>
+</form>
+<script>
+    let imgbong = null;
+    imgbong = document.getElementById("bong");
+
+    function init() {
+        imgbong = document.getElementById("bong");
+        imgbong = style.position = 'relative';
+        imgbong = style.left = '10px';
+    }
+    function moveRight() {
+        imgbong.style.left = parseInt(imgbong.style.left) + 10 + 'px' ;
+
+    }
+        window.onload = init;
+
+</script>
+</body>
+</html>
