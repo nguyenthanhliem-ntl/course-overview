@@ -5,9 +5,9 @@
     <title>may tinh</title>
 </head>
 <body>
-<form method="post"
-      <table style="700px">
-          <tr style="text-align: center">
+<form method="get">
+      <table style=width:400px>
+          <tr >
           <th><b> Caculator</b></th><br>
           </tr>
           <tr>
@@ -15,20 +15,50 @@
               <td> <input type="number" id="2"> </td>
               </tr><br>
           <tr>
-              <th> <button value="10" type="button" onclick="getcong">Addition(+)</button> </th>
-          <th> <button value="20" type="button" onclick="gettru">Subtration(-)</button> </th>
-              <th> <button value="30" type="button" onclick="getnhan" >Multiplication(*)</button> </th>
-              <th> <button value="40" type="button" onclick="getchia" > Division(/)</button> </th>
+              <td> <button value="10" type="button" onclick="getnumber1()">Addition(+)</button>
+                   <button value="20" type="button" onclick="getnumber2()">Subtration(-)</button></td>
+              <td> <button value="30" type="button" onclick="getnumber3()">Multiplication(*)</button>
+                   <button value="40" type="button" onclick="getnumber4()"> Division(/)</button></td>
           </tr>
       </table>
 <p><div id="50"></div> </p>
-
+</form>
 
 </body>
 <script>
-    var de1 = document.getElementById("1").value;
-    var de2 = document.getElementById("2").value;
-    var ketqua = de1+de2
-    document.getElementById("50").innerHTML= ketqua
+    function getnumber1() {
+        var de1 = document.getElementById("1").value;
+        var de2 = document.getElementById("2").value;
+        var d1 = parseFloat(de1);
+        var d2 = parseFloat(de2);
+        var ketqua = d1+d2;
+        document.getElementById("50").innerHTML = ketqua;
+    }
+    function getnumber2() {
+        var de3 = document.getElementById("1").value;
+        var de4 = document.getElementById("2").value;
+        var d3 = parseFloat(de3);
+        var d4 = parseFloat(de4);
+        var ketqua = d3 - d4;
+        document.getElementById("50").innerHTML = ketqua;
+    }
+    function getnumber3() {
+        var de5 = document.getElementById("1").value;
+        var de6 = document.getElementById("2").value;
+        var d5 = parseFloat(de5);
+        var d6 = parseFloat(de6)
+        var ketqua = d5*d6;
+        document.getElementById("50").innerHTML = ketqua;
+    }
+    function getnumber4() {
+        var de7 = document.getElementById("1").value;
+        var de8 = document.getElementById("2").value;
+        var d7 = parseFloat(de7);
+        var d8 = parseFloat(de8)
+        var ketqua = d7/d8;
+        document.getElementById("50").innerHTML = ketqua;
+    }
+
+
 </script>
 </html>
