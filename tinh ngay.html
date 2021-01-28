@@ -6,21 +6,41 @@
 </head>
 <body>
 <form style="width: 300px">
-    <table>
-        <th> <input id="1"   type="number"></th>
-        <th> <button type="button"  onclick="thang1">Tính số ngày</button> </th>
 
-    </table>
+         <input id="1"   type="number">
+         <button type="button"  onclick="thang1()">Tính số ngày</button>
     <p><div id="102"></div> </p>
 </form>
-
-</body>
 <script>
-    function thang1(){
-        var a = parseInt(document.getElementById("1"));
+    function thang1() {
+        var kok = parseInt(document.getElementById("1").value);
+        switch (kok) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("102").innerHTML = "thang "+ kok " co 31 ngay";
+                break;
+            case 2:
+                document.getElementById("102").innerHTML = "thang" + kok " co 28 hoac 29 ngay";
+                break;
 
-         if (a = 1 )
-             document.write("Thang" + a "co 31 ngay")
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("102").innerHTML = "thang " + kok " co 30 ngay";
+                break;
+                default:
+                    document.getElementById("102").innerHTML = " ngay";
+
+
+
+        }
     }
 </script>
+</body>
 </html>

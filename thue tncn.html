@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a;
+    a = prompt(" nhap tien luong cau ban");
+    var a = parseInt(a);
+    var b = a*0.05;
+    var c = a*0.1 + 250000;
+    var d = a*0.15 + 750000;
+    var f = a*0.2 + 1950000;
+    var g = a*0.25 + 4750000;
+    var h = a*0.3 + 9750000;
+    var k = a*0.35 + 18.15;
+
+    if (a>80000000) {
+        alert(k);
+    }else if (a>52000000) {
+        alert(h);
+    }else if(a>32000000) {
+        alert(g);
+    }else if (a>18000000) {
+        alert(f);
+    }else if (a>10000000) {
+        alert(d);
+    }else if (a>5000000){
+        alert(c);
+    }else if (a>0) {
+        alert(b);
+    }else {
+        alert("ban lam deo gi co tien ma nop thue :))");
+    }
+
+</script>
+</body>
+</html>
